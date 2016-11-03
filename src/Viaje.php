@@ -1,5 +1,5 @@
 <?php
-namespace Poli\Tarjeta;
+namespace Tarjetita;
 class Viaje {
 	protected $horario,$transporte,$costo,$tipo,$tipos = array(1 => "Viaje en Colectivo" , 2 => "Viaje en Bici");
 	public function __construct($horario,Transporte $transporte,$costo){
