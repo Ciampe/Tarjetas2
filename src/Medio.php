@@ -1,5 +1,5 @@
 <?php
-namespace Poli\Tarjeta;
+namespace Tarjetita;
 class Medio extends Tarjeta{
 	public function __construct (){
 		$this->saldo = 0;
