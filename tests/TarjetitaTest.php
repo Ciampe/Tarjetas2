@@ -37,4 +37,6 @@ public function setup(){
 		$this->assertEquals($this->tarjeta->pagar($this->colectivoA, "201$/07/3 11:55")->getTipo(),"Normal", "Debe devolver boleto tipo Normal");
   		$this->assertEquals($this->tarjeta->saldo(), 32, "Cargue 40 y pague un boleta, por lo tanto tengo 32");
 	}
+}
+
 ?>
