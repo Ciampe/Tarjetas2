@@ -1,6 +1,6 @@
 <?php
 	
-namespace Poli\Tarjeta;
+namespace Tarjetita;
 class Boleto {
 	protected $fecha,$saldo,$tipo,$tipos = array(1 => "Normal" , 2 => "Plus" , 3 => "Medio"),$linea,$costo,$idTarjeta;
 	public function __construct($fecha,$tipo,$costo,$saldo,$linea,$id){
