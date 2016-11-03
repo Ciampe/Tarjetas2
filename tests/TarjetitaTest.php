@@ -17,14 +17,12 @@ public function setup(){
     		$this->assertEquals($this->tarjeta->saldo(), 320, "Al cargar 272 debo tener 320");
         $this->tarjeta = new Tarjeta(12);
     		$this->tarjeta->recargar(100);
-        $this->assertEquals($this->tarjeta->saldo(), 320, "Al cargar 100 debo tener 100");
+        $this->assertEquals($this->tarjeta->saldo(), 100, "Al cargar 100 debo tener 100");
   	}
 	public function testPagarBici() {
     		$this->tarjeta->recargar(500);
     		$this->tarjeta->pagar($this->bici, "2000/02/27 15:25");
     		$this->assertEquals($this->tarjeta->saldo(), 628, "Si tengo 640 y pago una bici tengo que tener 628");
-        $this->tarjeta->pagar($this->bici, "2000/02/28 15:25");
-        $this->assertEquals($this->tarjeta->saldo(), 614, "Si tengo 640 y pago dos bicis tengo que tener 614");
   	}
 	public function testPagarViajeSinSaldo(){
 		$this->assertEquals($this->tarjeta->pagar($this->colectivoA, "2010/01/1 20:50")->getTipo(),"Plus", "Debe devolver boleto tipo Plus");
