@@ -1,5 +1,5 @@
 <?php
-namespace Poli\Tarjeta;
+namespace Tarjetita;
 abstract class Transporte {
 	protected $id,$costo,$tipo,$costotrans;
 	public function getId(){
