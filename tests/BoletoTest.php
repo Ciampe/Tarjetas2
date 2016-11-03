@@ -18,5 +18,5 @@ class BoletoTest extends \PHPUnit_Framework_TestCase {
     $this->assertEquals($aux->getSaldo(),312, "Usted tiene 312 de saldo");
     $this->assertEquals($this->tarjeta->saldo(), 312, "Cuando recargo 272 y pago un colectivo deberia tener 312");
   }
- 
+}
 ?>
