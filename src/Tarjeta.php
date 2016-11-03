@@ -1,5 +1,5 @@
 <?php
-namespace Poli\Tarjeta;
+namespace Tarjetita;
 class Tarjeta implements Int_Tarjeta{
 	protected $saldo,$porcentaje, $ultimafecha=0,$ultimabicipaga=0,$pasajesPlus=0,$tiempomaxtransbordo=3600, $viajes,$trans=0,$id;
 	protected $lunes, $dias = array(0 => "Lunes" , 1 => "Martes" , 2 => "Miercoles", 3 => "Jueves", 4 => "Viernes", 5 => "Sabado", 6 => "Domingo");
