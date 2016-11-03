@@ -10,7 +10,6 @@ class TransbordoTest extends \PHPUnit_Framework_TestCase {
   	$this->colectivoB = new Colectivo("35 Verde", "Rosario Bus");
   }
   
-// NORMAL
  	public function testTransbordo() {
   		$this->tarjeta->recargar(272);
   		$this->tarjeta->pagar($this->colectivoA, "2016/04/30 14:10");
