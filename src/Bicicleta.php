@@ -1,5 +1,5 @@
 <?php
-namespace Poli\Tarjeta;
+namespace Tarjetita;
 class Bicicleta extends Transporte{
 	public function __construct($id){
 		$this->id=$id;
