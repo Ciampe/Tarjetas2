@@ -1,5 +1,5 @@
 <?php
-namespace Poli\Tarjeta;
+namespace Tarjetita;
 class Colectivo extends Transporte{
 	protected $empresa;
 	public function __construct($id,$empresa){
