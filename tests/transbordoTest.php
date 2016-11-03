@@ -27,15 +27,15 @@ class TransbordoTest extends \PHPUnit_Framework_TestCase {
   
   	public function testMedioTransbordo() {
     		$this->medio->recargar(272);
-    		$this->medio->pagar($this->colectivoA, "2016/01/27 23:30");
-    		$this->medio->pagar($this->colectivoB, "2016/10/24 23:59");
+  		$this->tarjeta->pagar($this->colectivoA, "2016/06/28 10:50");
+   		$this->tarjeta->pagar($this->colectivoB, "2016/06/30 23:58");
     		$this->assertEquals($this->medio->saldo(), 314.68, "Si tengo 312 de saldo y al pagar un colectivo con transbordo y medio boleto debo tener 314.68");
  	}
- 	public function testMedioNoTransbordo() {
-  		$this->medio->recargar(272);
-  		$this->medio->pagar($this->colectivoA, "2026/02/24 10:50");
-  		$this->medio->pagar($this->colectivoB, "2001/12/10 10:00");
-  		$this->assertEquals($this->medio->saldo(), 312, "Si tengo 312 de saldo y al pagar un colectivo sin transbordo y medio boleto debo tener 312");
+  	public function testNoTransbordoMismoColectivo() {
+  		$this->tarjeta->recargar(272);
+  		$this->tarjeta->pagar($this->colectivoA, "2016/06/30 22:50");
+  		$this->tarjeta->pagar($this->colectivoA, "2016/06/30 22:54");
+  		$this->assertEquals($this->tarjeta->saldo(), 304, "Si tengo 312 de saldo y pago un colectivo sin transbordo ya que es el mismo deberia tener finalmente 304");
   	}
   
   	public function testTresColectivos(){
